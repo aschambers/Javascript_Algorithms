@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	var arr = [0,-1,2,-3,4,-5,6];
+	sum = 0;
+	for(var i = 0; i < arr.length; i++){
+		// if number is negative, increment sum by 1
+		if(arr[i] < 0){
+			sum++;
+		}
+		// else, set the previous index of array equal to current index
+		else {
+			arr[i-sum] = arr[i];
+		}
+	}
+	// shorten the array by how many negatives there are
+	while(sum--) {
+		arr.pop();
+	}
+	console.log(arr);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
